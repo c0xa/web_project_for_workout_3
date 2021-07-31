@@ -1,0 +1,40 @@
+._move{
+    transform: translateX(-40px);
+    transition: transform .100s;
+}
+
+._view {
+    transition: fill .20s;
+    fill: @shadow-grey !important;
+}
+
+
+.ya-covid-histogram {
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 32px @shadow-grey;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background: @default-white;
+    z-index: 5;
+
+    &__title {
+        &._selected {
+            .font-medium-very-bold();
+        }
+
+        &._usually {
+            .font-medium-medium();
+        }
+    }
+
+    &__icon {
+        position: relative;
+        bottom: 40px;
+        left: 150px;
+        fill: @default-white;
+        .create-icon(20px, 20px, 20px);
+        cursor: pointer;
+    }
+}
